@@ -1,0 +1,94 @@
+
+  <div class="content col-sm-9 col-md-6">
+    <h2>新規登録</h2>
+        <%= form_for(@user) do |f| %>
+          <form id="signup">
+            <div class="form-group row">
+              <%= f.label :name, 'Name*', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :name, class: 'form-control', :placeholder => "User ID" %>
+              </div>
+            </div>
+
+            <div class="form-group row">              
+              <%= f.label :email, 'Email*', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.email_field :email, class: 'form-control', :placeholder => "sodone@sodone.com" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :nationality, 'Nationality*', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :nationality, class: 'form-control', :placeholder => "Japanese" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :mother_tongue, 'Mother Tongue', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :mother_tongue, class: 'form-control', :placeholder => "Japanese" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :japanese_ability, class: 'form-control', :placeholder => "N1" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :occupation, 'Occupation', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :occupation, class: 'form-control', :placeholder => "Engineer" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :age, 'Age', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :age, class: 'form-control', :placeholder => "30" %>
+              </div>
+            </div>
+
+          
+            <div class="form-group row">
+              <%= f.label :residence, 'Residence', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.text_field :residence, class: 'form-control', :placeholder => "Tokyo" %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :password, 'Password*', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.password_field :password, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :password_confirmation, 'Password (confirm)*', class: "col-sm-2 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <div class="col-sm-offset-2 col-sm-5">              
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Receive Email from So Done
+              </label>
+              </div>
+            </div>
+  
+            <div class="form-group">  
+              <div class="col-sm-5">
+                <%= f.submit '登録する', class: 'btn btn-success btn-block' %>
+              </div>
+            </div>
+            
+          </form>
+        <% end %>
+  </div>

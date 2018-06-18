@@ -1,0 +1,210 @@
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="cover-contents">
+          <h4><%=t :headline1 %></h4>
+            <h1><strong><em>So Done</em></strong></h1>
+            <h2><strong>-そうだん-</strong></h2>
+            
+            <h4><%=t :headline2 %></h4>
+  <%#              <%= link_to 'リクエスト登録', signup_path, class: 'btn btn-success btn-lg' %>
+            <div id="link">
+                <%= link_to (t :register), 'http://www.sodone.sakura.ne.jp/', :target=>["_blank"] , class: 'btn btn-outline-dark btn-lg'%>
+            </div>    
+      </div>
+    </div>
+  </div>
+  
+  <div id="beta_intro">
+    <h3><strong><%=t :beta_header %></strong></h3>
+    <p><%=t :beata_p1 %></p>
+    <p><%=t :beata_p2 %></p>
+  </div>
+  
+  <div id="about">
+    <h3><strong>What's So Done?</strong></h3>
+    <h4>日本生活での困りごとがある人と解決できる人をつなぐサービスです。</h4>
+    <h4>日本生活特有～母国のサービスまでマッチング可能です。</h4>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            
+            <%# CARD %>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">育児、家事</h5>
+                    <div class="card-body">
+                      <p class="card-text">ベビーシッター、学校送り迎え、家事サポート、引っ越し手伝い等</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">レジャー</h5>                    
+                    <div class="card-body">
+                      <p class="card-text">日本観光ガイド、旅行プラン作成、文化体験、母国の食事、美容依頼等</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+          </div>
+          <div class="carousel-item">
+            
+            <%# CARD %>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">ビジネス</h5>                     
+                    <div class="card-body">
+                      <p class="card-text">就職アドバイス、スキルアップ、ビジネス代行、インタビュー対応等</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">学校</h5> 
+                    <div class="card-body">
+                      <p class="card-text">日本語学習（オンライン、対面）、家庭教師、留学相談、母国の文化、歴史学習サポート等</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="carousel-item">
+            
+            <%# CARD %>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">通訳</h5> 
+                    <div class="card-body">
+                      <p class="card-text">オンラインビデオ、電話、対面、言語：日本語、英語、中国語、ロシア語</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="card-header">翻訳</h5>                     
+                    <div class="card-body">
+                      <p class="card-text">短文翻訳～長文翻訳、言語：日本語、英語、中国語、ロシア語</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+  
+  <div id="how">
+    <h3><strong>How does So Done work?</strong></h3>
+    <h4>候補者とのやり取りや支払等すべてが<strong>「So Done」のプラットフォーム上で</strong>完結。</h4>
+    <h4>カレンダーを使った日程検索やオンラインビデオの対応も可能。</h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-5 col-md-2">     
+          <figure class="figure">
+            <img src="/images/sad.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">困りごとができる</figcaption>
+        </div>
+        
+        <div class="col-1">
+          <figure class="figure">
+          <img src="/images/arrow.png" id="arrow">
+        </div>
+        
+        <div class="col-5 col-md-2">   
+          <figure class="figure">
+            <img src="/images/supporter.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">解決できる人を探す</figcaption>
+          </figure>    
+        </div>
+        
+        <div class="col-1">
+          <figure class="figure">
+          <img src="/images/arrow.png" id="arrow">
+        </div>
+        
+        
+        <div class="col-5 col-md-2">    
+        <figure class="figure">
+          <img src="/images/contract.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          <figcaption class="figure-caption">申込</figcaption>
+        </figure>
+        </div>
+        
+        <div class="col-1">
+          <figure class="figure">
+          <img src="/images/arrow.png" id="arrow">
+        </div>
+        
+        <div class="col-5 col-md-2">
+        <figure class="figure">
+          <img src="/images/soudan.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          <figcaption class="figure-caption">対面・オンラインで相談</figcaption>
+        </figure>
+        </div>
+        
+        <div class="col-1">
+          <figure class="figure">
+          <img src="/images/arrow.png" id="arrow">
+        </div>
+      </div> 
+    </div>   
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-7 col-md-4">
+        <figure class="figure">
+          <img src="/images/solved.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          <figcaption class="figure-caption">解決</figcaption>
+        </figure>
+        </div>
+      </div> 
+    </div>   
+  </div> 
+  
+  <div id="why">
+    <h3><strong>Why So Done?</strong><br><br></h3>
+    <p>日本での仕事や学校、私生活の中で小さな問題があったり簡単な手伝いが必要でも、
+  周りに相談先がいないことでそれが大きな問題になり、日本での生活を不便、不満と感じることがあります。
+    <br><br>
+    </p>
+    <p>自国では当たり前の教育や娯楽等が自分の周りに存在せず、
+  満足したサービスを受けられないことがあります。
+    <br><br>
+    </p>
+    <p>これらは必要な人と必要な時に、必要な場所でつながれれば、
+  すべて解消することができるはずです。
+    <br><br>
+    </p>
+    <p>
+  日本に長く住んでいる人であれば簡単に解決できることで悩まない社会。<br>
+  母国の教育や娯楽を日本にいても続けられる社会。<br>
+  その実現を目指し、本サービスを開始します。
+    <br><br>
+    </p>
+    <p>サービスを必要としている方、またこんなサービスを提供したい、という方は
+  是非会員登録をして、サービスの実現にご協力をお願いします。
+    </p>
+
+  </div>
+
+

@@ -13,3 +13,129 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+ *= require flag-icon
+ */
+
+/* navbar */
+.navbar .navbar-brand {
+  color: black;
+}
+
+#navbarSupportedContent ul li a{
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+/* cover */
+.cover {
+  padding: 35px 20px;
+  background: url("/images/cover-chidori.png") center center no-repeat;  
+/*  background-color: #c1e4e9 ; */
+}
+
+.cover .cover-inner .cover-contents {
+  text-align: center;
+  position: relative;    
+}
+
+#link {
+  padding: 20px;
+}
+
+/* beta*/
+#beta_intro {
+  padding: 40px 20px;
+  background: url("/images/back-chidori.png") center center no-repeat;    
+/*  background-color: #2a3233 ; */
+  color: #fff; 
+  text-align: center;
+}
+
+#beta_intro p {
+  font-size: 18px;
+}
+
+/*about */
+#about {
+  padding: 40px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#about h3 {
+  padding: 20px 20px;
+}
+
+#carouselExampleIndicators {
+  padding: 30px;
+}
+
+.card-header {
+  background-color: #c1e4e9;
+}
+
+.carousel-control-prev-icon {
+  color: black;
+  background-color: grey;
+}
+
+.carousel-control-next-icon  {
+  color: black;
+  background-color: grey;
+}
+
+/* how */
+#how {
+  padding: 40px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#how h3 {
+  padding: 20px 20px;
+}
+
+
+#how .container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+#how .container .figure{
+  padding: 0;
+  margin: 0 auto;
+}
+
+#arrow {
+  margin: 0;
+  padding-top: 100%;
+  max-width: 30px;
+  height: auto;
+}
+
+
+/* why */
+#why {
+  padding: 40px 20px;
+  background: url("/images/back-chidori.png") ;    
+/*  background-color: #2a3233 ; */
+  color: #fff; 
+  text-align: center;
+}
+
+#why p {
+  font-size: 18px;
+  line-height: 170%;
+}
+
+/* Signip */
+
+#signup {
+    padding: 20px 40px;
+  
+}
