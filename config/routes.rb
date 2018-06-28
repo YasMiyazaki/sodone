@@ -3,20 +3,23 @@ Rails.application.routes.draw do
   
   get '/:locale' => 'toppages#index'
   
-
-  
   #参考: https://qiita.com/lhside/items/52623ca8d09858fc7d6e
   scope "(:locale)", locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
   
     get 'signup', to: 'users#new'
-    resources :users, only: [:show, :new, :create]
-      
+    resources :users, only: [:show, :new, :create, :update]
+    resources :posts, only: [:show]
+    
+    resources :comments, only: [:create, :destroy]
+    
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy'  
-      
-  end
     
-
-
+    resources :attentions, only: [:create, :destroy]
+    
+    resources :sitepages, only: [:terms]
+    get 'terms', to: 'sitepages#terms'
+    
+  end
 end

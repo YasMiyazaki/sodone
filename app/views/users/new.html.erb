@@ -1,91 +1,114 @@
 
-  <div class="content col-sm-9 col-md-6">
-    <h2>新規登録</h2>
+<%# Error Message %>
+<% if @user.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+  <div id="newuser" class="content col-sm-12 col-md-6">
+    <p><strong><%=t :user_register %></strong></p>
         <%= form_for(@user) do |f| %>
           <form id="signup">
             <div class="form-group row">
-              <%= f.label :name, 'Name*', class: "col-sm-2 col-form-label" %>
+              <%= f.label :name, 'Name*', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
               <%= f.text_field :name, class: 'form-control', :placeholder => "User ID" %>
+              <small class="text-muted">
+                Must be 5-20 characters long.
+                </small>
               </div>
             </div>
 
             <div class="form-group row">              
-              <%= f.label :email, 'Email*', class: "col-sm-2 col-form-label" %>
+              <%= f.label :email, 'Email*', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
               <%= f.email_field :email, class: 'form-control', :placeholder => "sodone@sodone.com" %>
               </div>
             </div>
 
             <div class="form-group row">
-              <%= f.label :nationality, 'Nationality*', class: "col-sm-2 col-form-label" %>
+              <%= f.label :nationality, 'Nationality*', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
-              <%= f.text_field :nationality, class: 'form-control', :placeholder => "Japanese" %>
+              <%= f.country_select :nationality, { priority_countries: ["JP", "US", "CN", "TW", "KR", "RU"], priority_countries_divider: "----------" } , {class: 'form-control'} %>
+              </div>
+            </div>
+
+<%#
+<%#            <div class="form-group row">
+<%#              <%= f.label :mother_tongue, 'Mother Tongue', class: "col-sm-4 col-form-label" %>
+<%#              <div class="col-sm-5">
+<%#              <%= f.text_field :mother_tongue, class: 'form-control', :placeholder => "Japanese" %>
+<%#              </div>
+<%#            </div>
+%>
+            <div class="form-group row">
+              <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-4 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.select :japanese_ability, [["母国語/Native", "0"], ["N1 Advanced", "1"], ["N2 Upper Intermediate", "2"], ["N3 Intermediate", "3"], ["N4 Beginner Intermediate", "4"], ["N5 Beginner", "5"], ["No Japanese ability", "6"]], { :prompt => "Please Select" }, { class: 'form-control'} %>
               </div>
             </div>
 
             <div class="form-group row">
-              <%= f.label :mother_tongue, 'Mother Tongue', class: "col-sm-2 col-form-label" %>
+              <%= f.label :occupation, 'Visa', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
-              <%= f.text_field :mother_tongue, class: 'form-control', :placeholder => "Japanese" %>
+              <%= f.grouped_collection_select :occupation, Visacategory.all, :visas, :category, :id, :name, {:prompt => "Please Select" }, { class: 'form-control' } %>
               </div>
             </div>
 
             <div class="form-group row">
-              <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-2 col-form-label" %>
-              <div class="col-sm-5">
-              <%= f.text_field :japanese_ability, class: 'form-control', :placeholder => "N1" %>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <%= f.label :occupation, 'Occupation', class: "col-sm-2 col-form-label" %>
-              <div class="col-sm-5">
-              <%= f.text_field :occupation, class: 'form-control', :placeholder => "Engineer" %>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <%= f.label :age, 'Age', class: "col-sm-2 col-form-label" %>
-              <div class="col-sm-5">
-              <%= f.text_field :age, class: 'form-control', :placeholder => "30" %>
-              </div>
-            </div>
-
-          
-            <div class="form-group row">
-              <%= f.label :residence, 'Residence', class: "col-sm-2 col-form-label" %>
+              <%= f.label :residence, 'City', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
               <%= f.text_field :residence, class: 'form-control', :placeholder => "Tokyo" %>
               </div>
             </div>
 
             <div class="form-group row">
-              <%= f.label :password, 'Password*', class: "col-sm-2 col-form-label" %>
+              <%= f.label :age, 'Age', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
-              <%= f.password_field :password, class: 'form-control' %>
+              <%= f.select :age, (16..99), {:prompt => "Please Select" }, { class: 'form-control' } %>
               </div>
             </div>
 
             <div class="form-group row">
-              <%= f.label :password_confirmation, 'Password (confirm)*', class: "col-sm-2 col-form-label" %>
+              <%= f.label :password, 'Password*', class: "col-sm-4 col-form-label" %>
+              <div class="col-sm-5">
+              <%= f.password_field :password, class: 'form-control' %>
+                <small class="text-muted">
+                Must be 5-20 characters long.
+                </small>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <%= f.label :password_confirmation, 'Password (confirm)*', class: "col-sm-4 col-form-label" %>
               <div class="col-sm-5">
               <%= f.password_field :password_confirmation, class: 'form-control' %>
               </div>
             </div>
 
             <div class="form-check">
-              <div class="col-sm-offset-2 col-sm-5">              
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
-                Receive Email from So Done
-              </label>
+              <div class="col-sm-offset-4 col-sm-5">              
+              <%= f.check_box :email_allowed,{}, "true", "false" %>
+              <%= f.label :email_allowed, 'Receive Email from So Done' %>
               </div>
             </div>
-  
+            
+            <div class="form-check">
+              <div class="col-sm-offset-4 col-sm-5"> 
+                <%= f.check_box :agreement, :as => :boolean, checked:false %>
+                <%= link_to (t :terms), terms_url, :style=>"color:black;"  %>に同意する
+              </div>
+            </div>
+            
             <div class="form-group">  
-              <div class="col-sm-5">
-                <%= f.submit '登録する', class: 'btn btn-success btn-block' %>
+              <div class="col-sm-9">
+                <%= f.submit (t :register), class: 'btn btn-success btn-block' %>
               </div>
             </div>
             

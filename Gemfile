@@ -60,3 +60,12 @@ gem 'pry-byebug', group: :development
 
 #country flag
 gem 'flag-icons-rails'
+
+#Country Dropdown
+gem 'country_select'
+
+#Lightbox
+gem 'lightbox2-rails'
+
+# Gemfile
+gem 'globalize', git: 'https://github.com/globalize/globalize'

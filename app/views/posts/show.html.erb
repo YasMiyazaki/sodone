@@ -1,0 +1,41 @@
+<div class="card" id="eachpost">
+  <div class="card-header">
+    <h5 class="card-title"><%= @post.title %></h5>
+  </div>
+  <div class="card-body">  
+    <p class="card-text">
+      <%= @post.content %>
+    </p>
+    <div class="reaction-buttons">
+      <%# Want Button#%>
+        <%= render 'attentions/want_button', post: @post %>
+      <%# Offer Button#%>            
+        <%= render 'attentions/offer_button', post: @post %>
+    </div>
+  </div>
+</div>
+
+<h5>Comments</h5>
+<% @post.comments.each do |comment| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to comment.user.name, user_path(comment.user_id)%>
+        <%= simple_format(comment.comment) %>
+        <%# delete button #%>
+        <% if current_user == comment.user %>
+          <%= link_to comment_url(comment.id), method: :delete, data: { confirm: "You sure?" } do %>
+            <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
+          <% end %>
+        <% end %>
+      </h5>
+    </div>
+  </div>
+<% end %>
+
+<%= form_for(@comment) do |f| %>
+  <%= f.label :comment, (t :please_comment) %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.text_area :comment, class: 'form-control', rows: 5 %>
+  <%= submit_tag 'Comment', class: 'btn btn-primary btn-block' %>
+<% end %>

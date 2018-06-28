@@ -18,19 +18,43 @@
  *= require flag-icon
  */
 
+/*
+*= require lightbox
+*/
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
 /* navbar */
 .navbar .navbar-brand {
   color: black;
 }
 
+
+#navbarSupportedContent ul li {
+  padding: 3px ;
+	display: flex;
+	align-items: center;
+}
 #navbarSupportedContent ul li a{
-  color: #fff;
+  color: #556466 ;
+}
+
+#navbarSupportedContent ul li a:hover {
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .navbar-toggler-icon {
   color: #fff;
 }
 
+
+/* Before Login */
 /* cover */
 .cover {
   padding: 35px 20px;
@@ -100,6 +124,17 @@
   padding: 20px 20px;
 }
 
+#mobile-page div {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px ;
+  }
+
+#mobile-page img {
+  max-height: 600px;
+  width: auto;
+  }
 
 #how .container {
   padding: 0;
@@ -133,9 +168,105 @@
   line-height: 170%;
 }
 
-/* Signip */
+/* Signup */
+
+#newuser {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  align-items: center;
+}
+
+#newuser p {
+  padding-top: 20px;
+}
 
 #signup {
-    padding: 20px 40px;
-  
+  padding: 20px 40px;
+}
+
+/* Login */
+
+#login {
+  width: 100%;
+  max-width: 660px;
+  padding: 15px;
+  margin: auto;
+  align-items: center;
+}
+
+#login p {
+  padding-top: 20px;
+}
+
+/* After Login */
+
+
+.eachcard {
+  margin: 0;
+  padding:0px 5px 5px 5px;
+}
+
+.eachcard .card {
+  max-width: 600px;
+  height: auto ;
+}
+
+#2headerinarow {
+  padding-left: 30px;
+}
+
+/*
+.eachcard img {
+  max-height: 350px ;
+  width: auto ;
+}
+*/
+
+.eachcard .card-text {
+  min-height: 50px ;
+  width: auto ;
+}
+
+.category .card-header {
+  text-align: center;
+  padding: 1px;
+  background-color: #c1e4e9 ;
+  border: solid 1px #7f9699 ;
+}
+
+.fas fa-heart {
+  color: pink;
+}
+
+/* Card */
+.reaction-buttons form {
+  display: inline-block;  
+  vertical-align: top;
+  line-height: 0;
+  margin-right: 0px;  
+}
+
+/* Post */
+#eachpost {
+  margin: 10px 0 30px 0;  
+}
+
+/* Footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 30px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footer > .container span {
+  padding-right: 10px;
+  padding-left: 10px;
 }

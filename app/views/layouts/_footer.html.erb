@@ -1,3 +1,7 @@
-<footer>
-    <div class="text-center text-muted">So Done 2018</div>
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">&copy; So Done</span>
+    <span><%= link_to 'Contact', 'http://www.sodone.sakura.ne.jp/', :target=>["_blank"], :style=>"color:black;" %></span>
+    <span class="text-muted"><%= link_to (t :terms), terms_url, :style=>"color:black;"  %></span>
+  </div>
 </footer>

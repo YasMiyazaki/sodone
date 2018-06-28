@@ -9,9 +9,75 @@ en:
   
   #beta
   beta_header: Prior to Beta release
-  beata_p1: Please share services you need or you want to provide
-  beata_p2: We are seeking to provide services with high demand so please register and push request button!
+  beta_p1: Please share services you need or you want to provide.
+  beta_p2: We are seeking to provide services with high demand so please register and push request button!
 
+  #What's So Done?
+  sodoneis: Connecting the one who needs support and the one who can offer the support.
+  capability: Japan related services to foreign services are offered.
+  category_house: Babysitting and Housekeeping
+  category_leasure: Leasure
+  category_business: Business and Career
+  category_study: Learn Japanese and Study in Japan
+  category_interpretation: Interpretation
+  category_translatioin: Translatioin
+  content_house: Babysitting, Support housekeeping, Pick-up from school, Moving…
+  content_leasure: Guide, Support trip planning, Cultural tour, Beauty Service…
+  content_business: Resume and Interview support, Career counselling, Skill up lessons…
+  content_study: Learn Japanese, Tutoring for school exams, Support study abroad…
+  content_interpretation: Online video, phone, face to face.
+  content_translatioin: Short message to document translation.
+
+  #How does So Done work?
+  howsodoneworks_1: You can search and request services.
+  howsodoneworks_2: All steps from chat to payment can be completed within "So Done" platform.
+  process_1: Problem occurs.
+  process_2: Find the solution.
+  process_3: Apply the service.
+  process_4: Communicate Face to Face or Online.
+  process_5: Solved!!
+
+  #Why So Done?
+  whysodone_1: A tiny problem from your work, school and provate life in Japan sometimes become a major problem if you don't have anyone to talk to. Frustration gets bigger and bigger, day by day.
+  whysodone_2: Services that are taken for granted in your country may not exist in Japan. Satisfaction gets less and less in your life in Japan.
+  whysodone_3: These thing can be resolved if you can meet the right people at right time.
+  whysodone_4: Society where you can find the solution easily, instead of struggling alone in the foreign country.
+  whysodone_5: Society where you can find services such as education and leasure that you had in your country.
+  whysodone_6: In order to achieve the society, "So Done" will start.
+  whysodone_7: If you need any specific service or want to offer services, please register and let us know so that it will come true.
+
+  #User New, Show
+  user_update: Update My Profile
+  update: Update
+  user_register: Create User (*mandatory fields)
+  email: Email Address
+  password: Password
+
+  #Navbar
+  language: Language
+  signup: Sing up
+  logout: Logout
+  login: Login
+
+  #Messages
+  login_success: Successfully logged in.
+  login_failure: Failed to log in.
+  loggedout: Logged out.
+  
+  #main
+  category1: Support Japanese Life
+  category2: Foreign Local Services
+  category3: Career and Business
+  category4: Language
+  top_comment: Please leave comments and push "Want" or "Offer" button if you are interested!
+
+  #Post Show
+  please_comment: Please leave your comment.
+
+
+
+
+  
   
   #Default
   

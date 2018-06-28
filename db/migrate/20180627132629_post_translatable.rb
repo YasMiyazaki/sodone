@@ -1,0 +1,18 @@
+class PostTranslatable < ActiveRecord::Migration[5.0]
+
+  def self.up
+    Post.create_translation_table!({
+      :title => :string,
+      :category => :string,
+      :headline => :string,
+      :content => :string
+    }, {
+      :migrate_data => true,
+      :remove_source_columns => true
+    })
+  end
+
+  def self.down
+    Post.drop_translation_table! :migrate_data => true
+  end
+end

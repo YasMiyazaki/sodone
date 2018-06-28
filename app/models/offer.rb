@@ -1,0 +1,2 @@
+class Offer < Attention
+end
