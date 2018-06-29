@@ -11,7 +11,7 @@
 <% end %>
 
 
-  <div id="newuser" class="content col-sm-12 col-md-6">s
+  <div id="newuser" class="content col-sm-12 col-md-6">
     <p><strong><%=t :user_register %></strong></p>
         <%= form_for(@user) do |f| %>
           <form id="signup">
@@ -101,7 +101,7 @@
             
             <div class="form-check">
               <div class="col-sm-offset-4 col-sm-5"> 
-                <%= f.check_box :agreement, :as => :boolean, checked:false %>
+                <%= f.check_box :terms, :as => :boolean, checked:false %>
                 <%= link_to (t :terms), terms_url, :style=>"color:black;"  %>に同意する
               </div>
             </div>
