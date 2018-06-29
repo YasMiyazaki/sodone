@@ -69,3 +69,8 @@ gem 'lightbox2-rails'
 
 # Gemfile
 gem 'globalize', git: 'https://github.com/globalize/globalize'
+
+# for heroku
+group :production do
+  gem 'pg', '0.21.0'
+end
