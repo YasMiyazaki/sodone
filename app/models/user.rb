@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, length: { in: 5..20 }
   
-  validates_acceptance_of :agreement, allow_nil: false, on: :create
+  validates_acceptance_of :terms, allow_nil: false, on: :create
   
   has_many :attentions
   has_many :posts, through: :attentions

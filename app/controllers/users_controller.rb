@@ -36,7 +36,7 @@ end
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :nationality, :mother_tongue, :japanese_ability, :occupation, :age, :residence, :email_allowed, :agreement)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :nationality, :mother_tongue, :japanese_ability, :occupation, :age, :residence, :email_allowed, :terms)
   end
 
 end

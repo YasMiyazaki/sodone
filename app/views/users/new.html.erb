@@ -94,7 +94,7 @@
 
             <div class="form-check">
               <div class="col-sm-offset-4 col-sm-5">              
-              <%= f.check_box :email_allowed,{}, "true", "false" %>
+              <%= f.check_box :email_allowed,{:checked => true}, "true", "false" %>
               <%= f.label :email_allowed, 'Receive Email from So Done' %>
               </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="form-check">
               <div class="col-sm-offset-4 col-sm-5"> 
                 <%= f.check_box :terms, :as => :boolean, checked:false %>
-                <%= link_to (t :terms), terms_url, :style=>"color:black;"  %>に同意する
+                <%= link_to (t :terms), terms_url, :style=>"color:black;" %>に同意する
               </div>
             </div>
             
