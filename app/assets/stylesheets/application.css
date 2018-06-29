@@ -36,7 +36,7 @@
 
 
 #navbarSupportedContent ul li {
-  padding: 3px ;
+  padding: 0 5px 0 5px;
 	display: flex;
 	align-items: center;
 }

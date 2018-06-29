@@ -1,21 +1,24 @@
+<% if logged_in? %>
 
-<% if current_user.want?(post) %>
-  <%= form_tag(attention_path(post.id), method: :delete) do %>
-    <%= hidden_field_tag :post_id, post.id %>
-    <%= hidden_field_tag :type, 'Want' %>
-    <%= button_tag :type => "submit", :class =>"btn btn-light btn-sm" do %>
-      <i class="fas fa-heart" style="color:pink;"></i> Unwant
+  <% if current_user.want?(post) %>
+    <%= form_tag(attention_path(post.id), method: :delete) do %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= hidden_field_tag :type, 'Want' %>
+      <%= button_tag :type => "submit", :class =>"btn btn-light btn-sm" do %>
+        <i class="fas fa-heart" style="color:pink;"></i> Unwant
+      <% end %>
     <% end %>
-  <% end %>
+    
+  <% else %>
+    <%= form_tag(attentions_path) do %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= hidden_field_tag :type, 'Want' %>
+  <%#    <%= submit_tag 'Want it', class: 'btn btn-primary' %>
+      <%= button_tag :type => "submit", :class =>"btn btn-outline-danger btn-sm" do %>
+        <i class="fas fa-heart" style="color:pink;"></i> Want
+      <% end %>
   
-<% else %>
-  <%= form_tag(attentions_path) do %>
-    <%= hidden_field_tag :post_id, post.id %>
-    <%= hidden_field_tag :type, 'Want' %>
-<%#    <%= submit_tag 'Want it', class: 'btn btn-primary' %>
-    <%= button_tag :type => "submit", :class =>"btn btn-outline-danger btn-sm" do %>
-      <i class="fas fa-heart" style="color:pink;"></i> Want
     <% end %>
-
   <% end %>
+
 <% end %>

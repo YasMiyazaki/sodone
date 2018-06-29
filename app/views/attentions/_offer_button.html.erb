@@ -1,21 +1,25 @@
 
-<% if current_user.offer?(post) %>
-  <%= form_tag(attention_path(post.id), method: :delete) do %>
-    <%= hidden_field_tag :post_id, post.id %>
-    <%= hidden_field_tag :type, 'Offer' %>
-    <%= button_tag :type => "submit", :class =>"btn btn-light btn-sm" do %>
-     <i class="fas fa-yen-sign" style="color:gold;"></i> Unoffer
-    <% end %>
-  <% end %>
-  
-<% else %>
-  <%= form_tag(attentions_path) do %>
-    <%= hidden_field_tag :post_id, post.id %>
-    <%= hidden_field_tag :type, 'Offer' %>
-<%#    <%= submit_tag 'offer it', class: 'btn btn-primary' %>
-    <%= button_tag :type => "submit", :class =>"btn btn-outline-warning btn-sm" do %>
-      <i class="fas fa-yen-sign" style="color:gold;"></i> Offer
-    <% end %>
+<% if logged_in? %>
 
+  <% if current_user.offer?(post) %>
+    <%= form_tag(attention_path(post.id), method: :delete) do %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= hidden_field_tag :type, 'Offer' %>
+      <%= button_tag :type => "submit", :class =>"btn btn-light btn-sm" do %>
+       <i class="fas fa-yen-sign" style="color:gold;"></i> Unoffer
+      <% end %>
+    <% end %>
+    
+  <% else %>
+    <%= form_tag(attentions_path) do %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= hidden_field_tag :type, 'Offer' %>
+  <%#    <%= submit_tag 'offer it', class: 'btn btn-primary' %>
+      <%= button_tag :type => "submit", :class =>"btn btn-outline-warning btn-sm" do %>
+        <i class="fas fa-yen-sign" style="color:gold;"></i> Offer
+      <% end %>
+  
+    <% end %>
   <% end %>
+
 <% end %>
