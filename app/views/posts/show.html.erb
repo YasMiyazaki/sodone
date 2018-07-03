@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<h5>Comments</h5>
+<h5><%=t :comments %></h5>
 <% @post.comments.each do |comment| %>
   <div class="card">
     <div class="card-body">
@@ -39,3 +39,17 @@
   <%= f.text_area :comment, class: 'form-control', rows: 5 %>
   <%= submit_tag 'Comment', class: 'btn btn-primary btn-block' %>
 <% end %>
+
+<div class="card" id="comment_template">
+  <div class="card-body">
+    <h5><%=t :comment_template %></h5>
+    <h6><i class="fas fa-heart" style="color:pink;"></i> Want</h6>
+    <p><%=t :comment_tmp_want1 %></p>
+    <p><%=t :comment_tmp_want2 %></p>
+    <p><%=t :comment_tmp_want3 %></p>
+    
+    <h6><i class="fas fa-yen-sign" style="color:gold;"></i> Offer</h6>
+    <p><%=t :comment_tmp_offer1 %></p>
+    <p><%=t :comment_tmp_offer2 %></p>
+  </div>
+</div>

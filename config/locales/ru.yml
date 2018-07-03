@@ -57,7 +57,7 @@ ru:
   signup: Создать аккаунт
   logout: Выйти
   login: Войти
-  language: 
+  language: Язык
   email: Адрес эл. почты
   password: Пароль
   login_success: Успешно вошли в систему.

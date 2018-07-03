@@ -52,6 +52,9 @@ en:
   user_register: Create User (*mandatory fields)
   email: Email Address
   password: Password
+  receive_email: Receive Email from So Done about service details and recruitment of service providers.
+  agree_term: I agree to the terms.
+  user_privacy: The data provided will be used only for the purpose of developing the service.
 
   #Navbar
   language: Language
@@ -69,16 +72,22 @@ en:
   category2: Foreign Local Services
   category3: Career and Business
   category4: Language
-  top_comment: Please leave comments and push "Want" or "Offer" button if you are interested!
+  top_comment1: After logged in, please
+  top_comment2: 1. Push "Want" button for services you want or need
+  top_comment3: 2. Push "Offer" button for services you want to offer.
+  top_comment4: For those who agreed to receive email from us, information regarding your interests will be sent.
+  top_comment5: By commenting the detail conditions of services you want (to offer), we might reflect your opinion into the service, and for those who agreed to receive emails from us, we might reach out to you. 
 
   #Post Show
   please_comment: Please leave your comment.
+  comments: Comments
+  comment_template: Comment Template
+  comment_tmp_want1: What kind of service do you want and how and how long at which location (including Online)? How much would you pay for it?
+  comment_tmp_want2: Example1 > I want someone native in English who can pick up an elementary school student from a school in Minato-ku on weekday evening. around 2,000 yen for each day.
+  comment_tmp_want3: Example2 > Japanese resume writing support and interview practice by Japanese and English bilingual with business background in Japan. I can pay up to 5,000 yen. I'm in Osaka, so Osaka or online is preferable.
+  comment_tmp_offer1: What kind of service do you want to offer and how and how long at which location (including Online)? How much would you charge for it?
+  comment_tmp_offer2: Example3 > I can visit your place and cook French in Tokyo. I am French chef staying in Tokyo with working holiday visa. Full course in 5,000 yen per person including ingredients.
 
-
-
-
-  
-  
   #Default
   
   activerecord:

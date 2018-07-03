@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     if login(email, password)
       flash[:success] = (t :login_success)
-      redirect_to root_url
+      redirect_to contents_path
     else
       flash.now[:danger] = (t :login_failure)
       render 'new'
