@@ -28,19 +28,21 @@
     <div class="row">
       <%# Life1 #%>
       <% @post1.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/babysitter.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/babysitter.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -49,19 +51,21 @@
       
       <%# Life2 #%>
       <% @post2.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/tutoring.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/tutoring.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -70,19 +74,21 @@
   
       <%# Life3 #%>
       <% @post3.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/sightseeing.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/sightseeing.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -91,19 +97,21 @@
   
       <%# Life4 #%>
       <% @post4.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/administration.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/administration.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -124,19 +132,21 @@
     <div class="row">
       <%# Career and Business1 Job hunting support　#%>
       <% @post7.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/jobhunting.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/jobhunting.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -145,19 +155,21 @@
   
       <%# Career and Business2 #%>
       <% @post8.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/skillup.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/skillup.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -166,19 +178,21 @@
   
       <%# Career and Business3 #%>
       <% @post9.each do |post| %>
-      <div class="eachcard" class="col-sm-3">
-        <div class="card">
-          <img class="card-img-top" src="/images/spotbusiness.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-            <p class="card-text"><%= post.headline %></p>
-            <div class="reaction-buttons">
-              <%# Want Button#%>
-              <%= render 'attentions/want_button', post: post %>
-              <%# Offer Button#%>            
-              <%= render 'attentions/offer_button', post: post %>
-              <%# Comment > Post Show %>
-              <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/spotbusiness.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
             </div>
           </div>
         </div>
@@ -188,22 +202,24 @@
   
     <%# Career and Business4 #%>
     <% @post10.each do |post| %>
-    <div class="eachcard" class="col-sm-3">
-      <div class="card">
-        <img class="card-img-top" src="/images/business-support.jpg" alt="business-support">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-          <p class="card-text"><%= post.headline %></p>
-          <div class="reaction-buttons">
-            <%# Want Button#%>
-            <%= render 'attentions/want_button', post: post %>
-            <%# Offer Button#%>            
-            <%= render 'attentions/offer_button', post: post %>
-            <%# Comment > Post Show %>
-            <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+      <div class="col-sm-3">
+        <div class="eachcard">
+          <div class="card">
+            <img class="card-img-top" src="/images/business-support.jpg" alt="business-support">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+              <p class="card-text"><%= post.headline %></p>
+              <div class="reaction-buttons">
+                <%# Want Button#%>
+                <%= render 'attentions/want_button', post: post %>
+                <%# Offer Button#%>            
+                <%= render 'attentions/offer_button', post: post %>
+                <%# Comment > Post Show %>
+                <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
     <% end %>    
     </div>
@@ -227,19 +243,21 @@
             <div class="row">
               <%# Local 1 #%>
               <% @post5.each do |post| %>
-              <div class="eachcard" class="col-sm-6">
-                <div class="card">
-                  <img class="card-img-top" src="/images/service-local.jpg" alt="service-local">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-                    <p class="card-text"><%= post.headline %></p>
-                    <div class="reaction-buttons">
-                      <%# Want Button#%>
-                      <%= render 'attentions/want_button', post: post %>
-                      <%# Offer Button#%>            
-                      <%= render 'attentions/offer_button', post: post %>
-                      <%# Comment > Post Show %>
-                      <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              <div class="col-sm-6">
+                <div class="eachcard">
+                  <div class="card">
+                    <img class="card-img-top" src="/images/service-local.jpg" alt="service-local">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+                      <p class="card-text"><%= post.headline %></p>
+                      <div class="reaction-buttons">
+                        <%# Want Button#%>
+                        <%= render 'attentions/want_button', post: post %>
+                        <%# Offer Button#%>            
+                        <%= render 'attentions/offer_button', post: post %>
+                        <%# Comment > Post Show %>
+                        <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -248,19 +266,21 @@
           
               <%# Local 2 #%>
               <% @post6.each do |post| %>
-              <div class="eachcard" class="col-sm-6">
-                <div class="card">
-                  <img class="card-img-top" src="/images/learn-local.jpg" alt="learn-local">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-                    <p class="card-text"><%= post.headline %></p>
-                    <div class="reaction-buttons">
-                      <%# Want Button#%>
-                      <%= render 'attentions/want_button', post: post %>
-                      <%# Offer Button#%>            
-                      <%= render 'attentions/offer_button', post: post %>
-                      <%# Comment > Post Show %>
-                      <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              <div class="col-sm-6">
+                <div class="eachcard">
+                  <div class="card">
+                    <img class="card-img-top" src="/images/learn-local.jpg" alt="learn-local">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+                      <p class="card-text"><%= post.headline %></p>
+                      <div class="reaction-buttons">
+                        <%# Want Button#%>
+                        <%= render 'attentions/want_button', post: post %>
+                        <%# Offer Button#%>            
+                        <%= render 'attentions/offer_button', post: post %>
+                        <%# Comment > Post Show %>
+                        <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -286,19 +306,21 @@
             <div class="row">
               <%# Language 1 #%>
               <% @post11.each do |post| %>
-              <div class="eachcard" class="col-sm-6">
-                <div class="card">
-                  <img class="card-img-top" src="/images/translation.jpg" alt="translation">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-                    <p class="card-text"><%= post.headline %></p>
-                    <div class="reaction-buttons">
-                      <%# Want Button#%>
-                      <%= render 'attentions/want_button', post: post %>
-                      <%# Offer Button#%>            
-                      <%= render 'attentions/offer_button', post: post %>
-                      <%# Comment > Post Show %>
-                      <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              <div class="col-sm-6">
+                <div class="eachcard">
+                  <div class="card">
+                    <img class="card-img-top" src="/images/translation.jpg" alt="translation">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+                      <p class="card-text"><%= post.headline %></p>
+                      <div class="reaction-buttons">
+                        <%# Want Button#%>
+                        <%= render 'attentions/want_button', post: post %>
+                        <%# Offer Button#%>            
+                        <%= render 'attentions/offer_button', post: post %>
+                        <%# Comment > Post Show %>
+                        <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -308,19 +330,21 @@
           
               <%# Language 2 #%>
               <% @post12.each do |post| %>
-              <div class="eachcard" class="col-sm-6">
-                <div class="card">
-                  <img class="card-img-top" src="/images/interpretation.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
-                    <p class="card-text"><%= post.headline %></p>
-                    <div class="reaction-buttons">
-                      <%# Want Button#%>
-                      <%= render 'attentions/want_button', post: post %>
-                      <%# Offer Button#%>            
-                      <%= render 'attentions/offer_button', post: post %>
-                      <%# Comment > Post Show %>
-                      <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+              <div class="col-sm-6">
+                <div class="eachcard">
+                  <div class="card">
+                    <img class="card-img-top" src="/images/interpretation.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= link_to post.title, post_url(post.id), :style=>"color:black;" %></h5>
+                      <p class="card-text"><%= post.headline %></p>
+                      <div class="reaction-buttons">
+                        <%# Want Button#%>
+                        <%= render 'attentions/want_button', post: post %>
+                        <%# Offer Button#%>            
+                        <%= render 'attentions/offer_button', post: post %>
+                        <%# Comment > Post Show %>
+                        <%= link_to "Comment", post_url(post.id), class: "btn btn-dark btn-sm" %>
+                      </div>
                     </div>
                   </div>
                 </div>
