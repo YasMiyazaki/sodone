@@ -2,91 +2,104 @@
 en:
   
 #index.html.rb
-  #cover  
+  # Cover
   headline1: Matching Platform to solve problems you face in Japan
   headline2: Find Japanese or expats from your country who can support you online and offline
   register: Register
-  
-  #beta
   beta_header: Prior to Beta release
-  beta_p1: Please share services you need or you want to provide.
+  beta_p1: Please share services you need or you want to provide
   beta_p2: We are seeking to provide services with high demand so please register and push request button!
-
-  #What's So Done?
+   
+  # What's So Done?
   sodoneis: Connecting the one who needs support and the one who can offer the support.
   capability: Japan related services to foreign services are offered.
   category_house: Babysitting and Housekeeping
-  category_leasure: Leasure
+  category_leasure: Leisure
   category_business: Business and Career
   category_study: Learn Japanese and Study in Japan
   category_interpretation: Interpretation
-  category_translatioin: Translatioin
+  category_translatioin: Translation
   content_house: Babysitting, Support housekeeping, Pick-up from school, Moving…
   content_leasure: Guide, Support trip planning, Cultural tour, Beauty Service…
   content_business: Resume and Interview support, Career counselling, Skill up lessons…
   content_study: Learn Japanese, Tutoring for school exams, Support study abroad…
   content_interpretation: Online video, phone, face to face.
   content_translatioin: Short message to document translation.
-
-  #How does So Done work?
+  
+  # How does So Done work?
   howsodoneworks_1: You can search and request services.
   howsodoneworks_2: All steps from chat to payment can be completed within "So Done" platform.
   process_1: Problem occurs.
   process_2: Find the solution.
   process_3: Apply the service.
-  process_4: Communicate Face to Face or Online.
+  process_4: Communicate Face to Face or Online
   process_5: Solved!!
-
-  #Why So Done?
-  whysodone_1: A tiny problem from your work, school and provate life in Japan sometimes become a major problem if you don't have anyone to talk to. Frustration gets bigger and bigger, day by day.
+  
+  # Why So Done?
+  whysodone_1: A tiny problem from your work, school and private life in Japan sometimes become a major problem if you don't have anyone to talk to. Frustration gets bigger and bigger, day by day.
   whysodone_2: Services that are taken for granted in your country may not exist in Japan. Satisfaction gets less and less in your life in Japan.
   whysodone_3: These thing can be resolved if you can meet the right people at right time.
   whysodone_4: Society where you can find the solution easily, instead of struggling alone in the foreign country.
-  whysodone_5: Society where you can find services such as education and leasure that you had in your country.
+  whysodone_5: Society where you can find services such as education and leisure that you had in your country.
   whysodone_6: In order to achieve the society, "So Done" will start.
   whysodone_7: If you need any specific service or want to offer services, please register and let us know so that it will come true.
-
-  #User New, Show
+  
+  # User New, Show: 
   user_update: Update My Profile
   update: Update
   user_register: Create User (*mandatory fields)
-  email: Email Address
-  password: Password
+  user_privacy: The data provided will be used only for the purpose of developing the service.
   receive_email: Receive Email from So Done about service details and recruitment of service providers.
   agree_term: I agree to the terms.
-  user_privacy: The data provided will be used only for the purpose of developing the service.
-
-  #Navbar
-  language: Language
-  signup: Singup
+  name: Nickname*
+  newemail: Email*
+  nationality: Nationality*
+  ability_ja: Japanese Ability
+  visa: Visa
+  city: City
+  age: Age
+  newpassword: Password*
+  password_cf: Password(Confirm)*
+  
+  # Navbar
+  signup: Signup
   logout: Logout
   login: Login
-
-  #Messages
+  language: Language
+  email: Email Address
+  password: Password
   login_success: Successfully logged in.
   login_failure: Failed to log in.
   loggedout: Logged out.
+  registration: User created
   
-  #main
+  # Top main
   category1: Support Japanese Life
-  category2: Foreign Local Services
+  category2: Home country related services 
   category3: Career and Business
   category4: Language
-  top_comment1: After logged in, please
-  top_comment2: 1. Push "Want" button for services you want or need
-  top_comment3: 2. Push "Offer" button for services you want to offer.
-  top_comment4: For those who agreed to receive email from us, information regarding your interests will be sent.
-  top_comment5: By commenting the detail conditions of services you want (to offer), we might reflect your opinion into the service, and for those who agreed to receive emails from us, we might reach out to you. 
-
-  #Post Show
-  please_comment: Please leave your comment.
+  terms: Terms and Conditions
+  top_comment1: Please kindly help So Done become great in providing solutions.
+  top_comment2: After logged in, please
+  top_comment3: 1. Push "Want" button for services you want or need.
+  top_comment4: 2. Push "Offer" button for services you want to offer.
+  top_comment5: 3. Push "Comment" button and leave your comments of the detail conditions of services you want (to offer). We might reflect your opinion into the service.
+  top_comment6: For those who agreed to receive email from us, information regarding your interests will be sent, and we might reach out to you. You can always update your profile in "My Profile".
+  
+  # Posts show
   comments: Comments
+  please_comment: Please leave your comment.
   comment_template: Comment Template
   comment_tmp_want1: What kind of service do you want and how and how long at which location (including Online)? How much would you pay for it?
   comment_tmp_want2: Example1 > I want someone native in English who can pick up an elementary school student from a school in Minato-ku on weekday evening. around 2,000 yen for each day.
   comment_tmp_want3: Example2 > Japanese resume writing support and interview practice by Japanese and English bilingual with business background in Japan. I can pay up to 5,000 yen. I'm in Osaka, so Osaka or online is preferable.
   comment_tmp_offer1: What kind of service do you want to offer and how and how long at which location (including Online)? How much would you charge for it?
   comment_tmp_offer2: Example3 > I can visit your place and cook French in Tokyo. I am French chef staying in Tokyo with working holiday visa. Full course in 5,000 yen per person including ingredients.
+
+  #Messages
+  login_success: Successfully logged in.
+  login_failure: Failed to log in.
+  loggedout: Logged out.
 
   #Default
   

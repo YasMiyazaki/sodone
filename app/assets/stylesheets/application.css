@@ -201,6 +201,9 @@
 
 /* After Login */
 
+#topcomment {
+  padding: 20px 10px 10px 10px;
+}
 
 .eachcard {
   margin: 0;

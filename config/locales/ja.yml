@@ -2,17 +2,15 @@
 ja:
 
 #index.html.rb
-  #cover  
+  # Cover
   headline1: 日本生活の困りごとを解決する、マッチングプラットフォーム
   headline2: 日本生活の困りごとを解決できる日本人、母国出身者を見つけましょう。
-  register: 登録  
-  
-  #beta
+  register: 登録
   beta_header: Beta版開発にあたり
   beta_p1: 現在、あなたが必要とするサービス、もしくは提供したいサービスのリクエストを募集中です。
   beta_p2: リクエストが多いものから順次サービス化していく予定ですので、是非会員登録の上、リクエストボタンを押してください。
   
-  #What's So Done?
+  # What's So Done?
   sodoneis: 日本生活での困りごとがある人と解決できる人をつなぐサービスです。
   capability: 日本生活特有のことから、母国出身者が提供するローカルなサービスまで幅広く対応可能です。
   category_house: 育児、家事
@@ -27,8 +25,8 @@ ja:
   content_study: 日本語学習（オンライン、対面）、家庭教師、留学相談、母国の文化、歴史学習サポート等
   content_interpretation: オンラインビデオ、電話、対面、言語：日本語、英語、中国語、ロシア語等
   content_translatioin: 短文翻訳～長文翻訳、言語：日本語、英語、中国語、ロシア語等
-
-  #How does So Done work?
+  
+  # How does So Done work?
   howsodoneworks_1: 自分が必要とするサービスの検索や依頼の作成が可能。
   howsodoneworks_2: コミュニケーションや対価の支払等すべてが「So Done」のプラットフォーム上で完結。
   process_1: 困りごとの発生
@@ -36,8 +34,8 @@ ja:
   process_3: 申込
   process_4: 対面orオンラインで相談
   process_5: 解決!!
- 
-  #Why So Done?
+  
+  # Why So Done?
   whysodone_1: 日本での仕事や学校、私生活の中で小さな問題があったり簡単な手伝いが必要でも、 周りに相談先がいないことでそれが大きな問題になり、日本での生活を不便、不満と感じることがあります。
   whysodone_2: 自国では当たり前の教育や娯楽等が自分の周りに存在せず、 満足したサービスを受けられないことがあります。 
   whysodone_3: これらは必要な人と必要な時に、必要な場所でつながれれば、 すべて解消することができるはずです。 
@@ -45,52 +43,68 @@ ja:
   whysodone_5: 母国の教育や娯楽を日本にいても続けられる社会。
   whysodone_6: その実現を目指し、本サービスを開始します。 
   whysodone_7: サービスを必要としている方、またこんなサービスを提供したい、という方は 是非会員登録をして、サービスの実現にご協力をお願いします。
-
-  #User New, Show
+  
+  # User New, Show: 
   user_update: ユーザ更新
   update: 更新する
   user_register: 新規登録(*必須入力)
-  email: メールアドレス
-  password: パスワード
+  user_privacy: ご登録いただいた情報はSo Doneサービス開発のみに使用し、それ以外の目的のために使用することありません。
   receive_email: So Doneが今後サービスを展開する際に、サービス提供の連絡やサービスを提供する協力者募集の案内を受け取る。
   agree_term: 利用規約に同意する。
-  user_privacy: ご登録いただいた情報はSo Doneサービス開発のみに使用し、それ以外の目的のために使用することありません。
-
-  #Navbar
-  language: 言語
+  name: ニックネーム*
+  newemail: Email*
+  nationality: 国籍*
+  ability_ja: 日本語能力
+  visa: 在留資格
+  city: 居住地
+  age: 年齢
+  newpassword: パスワード*
+  password_cf: パスワード(確認)*
+  
+  # Navbar
   signup: 新規登録
   logout: ログアウト
   login: ログイン
+  language: 言語
+  email: メールアドレス
+  password: パスワード
+  login_success: ログインに成功しました。
+  login_failure: ログインに失敗しました。
+  loggedout: ログアウトしました。
+  registration: ユーザを登録しました。
+  
+  # Top main
+  category1: 日本生活サポート
+  category2: 母国ローカルサービス
+  category3: ビジネス・キャリア
+  category4: 言語
+  terms: 利用規約
+  top_comment1: So Doneプラットフォームを将来のユーザにとってより良いものにするために。
+  top_comment2: ログイン後に表示されるボタン、コメント機能を使い、
+  top_comment3: 1. 自分がサービスを受けたいサービスに"Want"を押してください。
+  top_comment4: 2. 自分が提供したいサービスに"Offer"を押してください。
+  top_comment5: 3. コメント欄に自分が必要とする、もしくは提供したいサービスを具体的に記述ください。今後サービスを展開するときの参考とさせていただきます。
+  top_comment6: So Doneからのメールを受信することに同意いただいた方々に、ボタンを押下したカテゴリに関するサービス提供の案内をご連絡致します。また、場合によっては、こちらからご連絡させていただきます。この設定はMy Profileからいつでも変更可能です。
+  
+  # Posts show
+  comments: コメント
+  please_comment: コメントしてください。
+  comment_template: コメント定型文
+  comment_tmp_want1: どのようなサービスを、どこで(オンライン含む)、どのくらいの時間受けたいですか。また、そのためにお金を支払うとすれば、いくら払いますか。
+  comment_tmp_want2: 例1：英語の話せる方に小学生の学校の迎えを東京の港区で平日の夕方にお願いしたい。1回約1時間で2000円程度でお願いしたい。
+  comment_tmp_want3: 例2：日本の会社での就職のために履歴書の作成と面接の対策2時間をオンラインでお願いしたい。日本語と英語のバイリンガルの方でビジネス経験がある方を対象とします。5000円くらいなら支払います。
+  comment_tmp_offer1: どのようなサービスを、どこで(オンライン含む)、どのくらいの時間提供したいですか。また、そのサービスにどの程度の見返りを求めますか。
+  comment_tmp_offer2: 例3：フランス料理を東京都内ならどこでも訪問し作ります。私はフランス人のシェフで、今日本にワーキングホリデーで来ています。食材費込みで一人5000円程度で2時間のフルコースを提供します。
 
   #Messages
   login_success: ログインに成功しました。
   login_failure: ログインに失敗しました。
   loggedout: ログアウトしました。
 
-  #main
-  category1: 日本生活サポート
-  category2: 母国ローカルサービス
-  category3: ビジネス・キャリア
-  category4: 言語
-  top_comment1: ログイン後に表示されるボタン、コメント機能を使い、
-  top_comment2: 1. 自分がサービスを受けたいサービスに"Want"を押してください。
-  top_comment3: 2. 自分が提供したいサービスに"Offer"を押してください。
-  top_comment4: So Doneからのメールを受信することに同意いただいた方々に、ボタンを押下したカテゴリに関するサービス提供の案内をご連絡致します。
-  top_comment5: また、コメント欄に自分が必要とする、もしくは提供したいサービスを具体的に記述いただくことで、今後サービスを展開するときの参考とさせていただきます。またメール受信可とされている方には、場合によっては、こちらからご連絡させていただきます。
-
-  #Post Show
-  please_comment: コメント
-  comments: コメント
-  comment_template: コメント定型文
-  comment_tmp_want1: どのようなサービスを、どこで(オンライン含む)、どのくらいの時間受けたいですか。また、そのためにお金を支払うとすれば、いくら払いますか。
-  comment_tmp_want2: 例1:英語の話せる方に小学生の学校の迎えを東京の港区で平日の夕方にお願いしたい。1回2000円程度でお願いしたい。
-  comment_tmp_want3: 例2:日本の会社での就職のために履歴書の作成と面接の対策をオンラインでお願いしたい。日本語と英語のバイリンガルの方でビジネス経験がある方を対象とします。5000円くらいなら支払います。
-  comment_tmp_offer1: どのようなサービスを、どこで(オンライン含む)、どのくらいの時間提供したいですか。また、そのサービスにどの程度の見返りを求めますか。
-  comment_tmp_offer2: 例3:フランス料理を東京都内ならどこでも訪問し作ります。私はフランス人のシェフで、今日本にワーキングホリデーで来ています。食材費込みで一人5000円程度でフルコースを提供します。
+  # Never delete or change indent of "activerecord:"" below as it's necessary for default translation 
+  activerecord:
 
   #Default
-
-  activerecord:
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
