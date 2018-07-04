@@ -256,7 +256,6 @@
 }
 
 
-
 /* Post */
 #eachpost {
   margin: 10px 0 30px 0;  
@@ -265,6 +264,15 @@
 /* Comments */
 #listsofcomments {
   padding: 10px 0px;
+}
+
+/* Child Comments */
+#childcomments {
+  padding: 10px 0px;
+}
+
+#listchildcomments {
+  padding: 5px 0px 5px 30px;  
 }
 
 /* Footer */

@@ -2,10 +2,6 @@ class CommentsController < ApplicationController
   before_action :require_user_logged_in, only: [:create, :destroy]
   before_action :correct_user, only: [:destroy]  
   
-  def show
-    @comments = Comment.order('created_at DESC').page(params[:page])
-  end
-    
   def create
     @comment = current_user.comments.build(comment_params)
     if @comment.save
@@ -23,7 +19,17 @@ class CommentsController < ApplicationController
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)    
   end
-
+  
+  def list
+    @comments = Comment.order('created_at DESC').page(params[:page])
+  end
+  
+  def show
+    @comment = Comment.find(params[:id])
+    @childcomments = @comment.childcomments.all
+    @childcomment = Childcomment.new(user_id: current_user)  #form_for用
+  end
+  
   private
   
   def comment_params

@@ -1,27 +1,55 @@
-<h5><%=t :comments %></h5>
-<% @comments.each do |comment| %>
-  <div id="listsofcomments">
-    <div class="card">
-      <div class="card-header">
-        <%= comment.post.category %>
-          <%# delete button #%>
-          <% if current_user == comment.user %>
-            <%= link_to comment_url(comment), method: :delete, data: { confirm: "You sure?" } do %>
-              <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
-            <% end %>
+<div id="childcomments">
+  <div class="card">
+    <div class="card-header">
+      <%= @comment.post.title %>
+        <%# delete button #%>
+        <% if current_user == @comment.user %>
+          <%= link_to comment_url(@comment), method: :delete, data: { confirm: "You sure?" } do %>
+            <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
           <% end %>
-          <span class="text-muted">
-            <%= time_ago_in_words(comment.created_at) %> ago
-          </span>
-      </div>
+        <% end %>
+        <span class="text-muted">
+          <%= time_ago_in_words(@comment.created_at) %> ago
+        </span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to @comment.user.name, user_path(@comment.user)%>
+        <%= simple_format(@comment.comment) %>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<% @childcomments.each do |childcomment| %>
+  <div id="listchildcomments">
+    <div class="card">
       <div class="card-body">
         <h5 class="card-title">
-          <%= link_to comment.user.name, user_path(comment.user)%>
-          <%= simple_format(comment.comment) %>
+          <%= link_to childcomment.user.name, user_path(childcomment.user)%>
         </h5>
+        <p class="card-text">
+          <%= simple_format(childcomment.childcomment) %>
+          <div class="text-right">
+            <small class="text-muted">
+              <%# delete button #%>
+              <% if current_user == childcomment.user %>
+                <%= link_to childcomment_url(childcomment), method: :delete, data: { confirm: "You sure?" } do %>
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                <% end %>
+              <% end %>
+                <%= time_ago_in_words(childcomment.created_at) %>
+            </small>
+          </p>
+          </div>
       </div>
     </div>
   </div>
 <% end %>
 
-<%= paginate @comments %>
+<%= form_for(@childcomment) do |f| %>
+  <%= f.label :childcomment, (t :please_comment) %>
+  <%= f.hidden_field :comment_id, value: @comment.id %>
+  <%= f.text_area :childcomment, class: 'form-control', rows: 1 %>
+  <%= submit_tag 'Comment', class: 'btn btn-primary btn-block' %>
+<% end %>

@@ -19,6 +19,7 @@ class User < ApplicationRecord
   has_many :offer_items, through: :offers, class_name: 'Post', source: :post 
   
   has_many :comments
+  has_many :childcomments
   
   def want(post)
     self.wants.find_or_create_by(post_id: post.id)

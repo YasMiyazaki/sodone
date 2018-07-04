@@ -38,7 +38,7 @@
       </li>
 
       <li class="nav-item"><%= link_to "Contents", contents_path %></li>
-      <li class="nav-item"><%= link_to "Comments", comments_path %></li>
+      <li class="nav-item"><%= link_to "Comments", list_path %></li>
 
    <% if logged_in? %>
       <li class="nav-item"><%= link_to 'My profile', user_path(current_user) %></li>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180627132629) do
+ActiveRecord::Schema.define(version: 20180704153656) do
 
   create_table "attentions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "type"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20180627132629) do
     t.index ["post_id"], name: "index_attentions_on_post_id", using: :btree
     t.index ["user_id", "post_id", "type"], name: "index_attentions_on_user_id_and_post_id_and_type", unique: true, using: :btree
     t.index ["user_id"], name: "index_attentions_on_user_id", using: :btree
+  end
+
+  create_table "childcomments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.string   "childcomment"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "comment_id"
+    t.index ["comment_id"], name: "index_childcomments_on_comment_id", using: :btree
+    t.index ["user_id"], name: "index_childcomments_on_user_id", using: :btree
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -82,6 +92,8 @@ ActiveRecord::Schema.define(version: 20180627132629) do
 
   add_foreign_key "attentions", "posts"
   add_foreign_key "attentions", "users"
+  add_foreign_key "childcomments", "comments"
+  add_foreign_key "childcomments", "users"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "visas", "visacategories"
