@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in, only: [:create, :destroy]
   before_action :correct_user, only: [:destroy]  
+  
+  def show
+    @comments = Comment.order('created_at DESC').page(params[:page])
+  end
     
   def create
     @comment = current_user.comments.build(comment_params)

@@ -262,6 +262,11 @@
   margin: 10px 0 30px 0;  
 }
 
+/* Comments */
+#listsofcomments {
+  padding: 10px 0px;
+}
+
 /* Footer */
 .footer {
   bottom: 0;

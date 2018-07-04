@@ -10,14 +10,14 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :new, :create, :update]
     resources :posts, only: [:show]
     
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:show, :create, :destroy]
     
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'  
     
     get 'contents', to: 'toppages#contents' 
-    
+    get 'comments', to: 'comments#show'
     resources :attentions, only: [:create, :destroy]
     
     resources :sitepages, only: [:terms]

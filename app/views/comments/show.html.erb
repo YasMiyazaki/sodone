@@ -1,0 +1,27 @@
+<h5><%=t :comments %></h5>
+<% @comments.each do |comment| %>
+  <div id="listsofcomments">
+    <div class="card">
+      <div class="card-header">
+        <%= comment.post.category %>
+          <%# delete button #%>
+          <% if current_user == comment.user %>
+            <%= link_to comment_url(comment), method: :delete, data: { confirm: "You sure?" } do %>
+              <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
+            <% end %>
+          <% end %>
+          <span class="text-muted">
+            <%= time_ago_in_words(comment.created_at) %> ago
+          </span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= link_to comment.user.name, user_path(comment.user)%>
+          <%= simple_format(comment.comment) %>
+        </h5>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= paginate @comments %>

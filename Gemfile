@@ -74,3 +74,6 @@ gem 'globalize', git: 'https://github.com/globalize/globalize'
 group :production do
   gem 'pg', '0.21.0'
 end
+
+# pagination
+gem 'kaminari'
