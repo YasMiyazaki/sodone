@@ -77,3 +77,6 @@ end
 
 # pagination
 gem 'kaminari'
+
+# ENV
+gem 'dotenv-rails'

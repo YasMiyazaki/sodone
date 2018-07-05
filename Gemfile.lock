@@ -70,6 +70,10 @@ GEM
       countries (~> 2.0)
       sort_alphabetical (~> 1.0)
     crass (1.0.4)
+    dotenv (2.5.0)
+    dotenv-rails (2.5.0)
+      dotenv (= 2.5.0)
+      railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -118,7 +122,7 @@ GEM
     multi_json (1.13.1)
     mysql2 (0.4.10)
     nio4r (2.3.1)
-    nokogiri (1.8.3)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
     pry (0.11.3)
@@ -197,7 +201,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.12)
+    uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
     unicode_utils (1.4.0)
     web-console (3.6.2)
@@ -217,6 +221,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   country_select
+  dotenv-rails
   flag-icons-rails
   globalize!
   jbuilder (~> 2.5)

@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   before_action :correct_user, only: [:destroy]  
   
   def create
-    @comment = current_user.comments.build(comment_params)
     if @comment.save
 #      flash[:success] = 'コメントを投稿しました。'
       redirect_back(fallback_location: root_path)

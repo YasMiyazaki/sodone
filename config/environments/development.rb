@@ -26,11 +26,21 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Email configuration on 20180705
+  config.action_mailer.delivery_method = :smtp
+
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
+  # Email configuration on 20180705
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :user_name => ENV["EMAIL_HIDDEN"],
+    :password => ENV["PASSWORD_HIDDEN"],
+  }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
