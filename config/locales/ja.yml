@@ -104,6 +104,17 @@ ja:
   # Never delete or change indent of "activerecord:"" below as it's necessary for default translation 
   activerecord:
 
+
+  #Mailer
+  notice_mailer:
+    sendmail_confirm:
+      subject: '[So Done -そうだん-] ユーザ登録ありがとうございます。'
+    sendmail_newcomment:
+      subject: '[So Done -そうだん-] あなたの投稿にコメントがあります。'
+
+
+
+
   #Default
     errors:
       messages:

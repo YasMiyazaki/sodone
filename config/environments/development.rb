@@ -34,6 +34,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  # Email configuration on 20180706
+  config.action_mailer.default_url_options = { host: 'www.sodone.jp' }
+  
   # Email configuration on 20180705
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",

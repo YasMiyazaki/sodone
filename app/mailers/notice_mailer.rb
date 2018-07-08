@@ -9,7 +9,23 @@ class NoticeMailer < ApplicationMailer
   
   def sendmail_confirm(user)
     @user = user
-    mail to: @user.email,
-      subject: 'Thank you from So Done.'
+    @url_en  = 'www.sodone.jp'    
+    @url_ja  = 'www.sodone.jp/ja'
+    @url_ru  = 'www.sodone.jp/ru'
+    mail to: @user.email
+    # refer to translation file
+    #  subject: 'Thank you from So Done.'
+  end
+  
+  def sendmail_newcomment(user, childcomment)
+    @user = user
+    @url_en  = 'www.sodone.jp'    
+    @url_ja  = 'www.sodone.jp/ja'
+    @url_ru  = 'www.sodone.jp/ru'
+    @childcomment = childcomment
+    @comment = childcomment.comment
+    mail to: @user.email
+    # refer to translation file
+    #  subject: 'Thank you from So Done.'
   end
 end

@@ -5,6 +5,23 @@ class ChildcommentsController < ApplicationController
   def create
     @childcomment = current_user.childcomments.build(childcomment_params)
     if @childcomment.save
+
+      @user = @childcomment.comment.user #コメントユーザ
+      
+      @childcomments = @childcomment.comment.childcomments.where.not(user_id: [current_user, @user]) #今投稿されたChildcommentにひもづくCommentにひもづくchildcommentすべてを抽出
+      @childcommentsusers = @childcomments.select(:user_id)
+      @childcommentsusers = @childcommentsusers.distinct.pluck(:user_id)
+      @childcommentsusers = User.where(id: @childcommentsusers)
+
+      @childcommentsusers.each do |childcommentsuser|
+        NoticeMailer.sendmail_newcomment(childcommentsuser, @childcomment).deliver_later(wait: 3.second)
+      end
+      
+      # 今回Childcommentした人がコメントユーザでない場合にchildcommentした人にメール送付
+      unless current_user == @childcomment.comment.user
+        NoticeMailer.sendmail_newcomment(@user, @childcomment).deliver_later(wait: 3.second)
+      end
+       
 #      flash[:success] = 'コメントを投稿しました。'
       redirect_back(fallback_location: root_path)
     else

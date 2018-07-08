@@ -16,3 +16,4 @@
 //= require_tree .
 
 //= require lightbox
+//= require ckeditor/init

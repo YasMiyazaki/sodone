@@ -80,3 +80,7 @@ gem 'kaminari'
 
 # ENV
 gem 'dotenv-rails'
+
+# ckeditor
+gem 'ckeditor' #CKEditorそのもの
+gem 'mini_magick'

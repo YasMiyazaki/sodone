@@ -101,9 +101,29 @@ en:
   login_failure: Failed to log in.
   loggedout: Logged out.
 
-  #Default
-  
+  ckeditor:
+    page_title: 'CKEditor Files Manager'
+    confirm_delete: 'Delete file?'
+    buttons:
+      cancel: 'Cancel'
+      upload: 'Upload'
+      delete: 'Delete'
+      next: 'Next'
+
+  # Never delete or change indent of "activerecord:"" below as it's necessary for default translation 
   activerecord:
+
+
+  #Mailer
+  notice_mailer:
+    sendmail_confirm:
+      subject: '[So Done -そうだん-] Thanks for signing up.'
+    sendmail_newcomment:
+      subject: '[So Done -そうだん-] New comment on your post.'
+
+
+
+  
     errors:
       messages:
         record_invalid: "Validation failed: %{errors}"

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save 
 #      flash[:success] = 'ユーザを登録しました。'
-#      NoticeMailer.sendmail_confirm(@user).deliver_now
+      NoticeMailer.sendmail_confirm(@user).deliver_now
       redirect_to @user
     else
 #      flash.now[:danger] = 'ユーザの登録に失敗しました。'
@@ -26,7 +26,8 @@ class UsersController < ApplicationController
 def update
     @user = User.find(params[:id])
     
-    if @user.update(user_params)
+    binding.pry
+    if @user.update_attributes(user_params)
       redirect_to @user
       flash[:success] = "プロフィールを更新しました" 
     else
@@ -37,7 +38,7 @@ end
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :nationality, :mother_tongue, :japanese_ability, :occupation, :age, :residence, :email_allowed, :terms)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :nationality, :self_intro, :japanese_ability, :occupation, :age, :residence, :email_allowed, :terms)
   end
 
 end
