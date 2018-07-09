@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :age
       t.string :residence
       t.string :email_allowed
+      t.text :self_intro
 
       t.timestamps
     end
