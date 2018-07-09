@@ -1,4 +1,4 @@
-<div class="content col-sm-12 col-md-6">
+<div class="content col-sm-12 col-md-12">
 
     <%= form_for(@user) do |f| %>
       <form id="user_maintenance">
@@ -7,57 +7,57 @@
       <p><strong><%=t :user_update %></strong></p>
 
         <div class="form-group row">
-          <%= f.label :name, 'Name', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :name, 'Name', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.text_field :name, class: 'form-control' %>
           </div>
         </div>
   
         <div class="form-group row">              
-          <%= f.label :email, 'Email', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :email, 'Email', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.email_field :email, class: 'form-control'%>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :nationality, 'Nationality', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :nationality, 'Nationality', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.country_select :nationality, { priority_countries: ["JP", "US", "CN", "TW", "KR", "RU"], priority_countries_divider: "----------" } , {class: 'form-control'} %>
           </div>
         </div>
     
         <div class="form-group row">
-          <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.select :japanese_ability, [["母国語/Native", "0"], ["N1 Advanced", "1"], ["N2 Upper Intermediate", "2"], ["N3 Intermediate", "3"], ["N4 Beginner Intermediate", "4"], ["N5 Beginner", "5"], ["No Japanese ability", "6"]], { }, { class: 'form-control'} %>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :occupation, 'Visa', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :occupation, 'Visa', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.grouped_collection_select :occupation, Visacategory.all, :visas, :category, :id, :name, {:prompt => "Please Select" }, { class: 'form-control' } %>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :residence, 'City', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :residence, 'City', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.text_field :residence, class: 'form-control', :placeholder => "Tokyo" %>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :age, 'Age', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :age, 'Age', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.select :age, (16..99), {:prompt => "Please Select" }, { class: 'form-control' } %>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :self_intro, 'About Me', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :self_intro, 'About Me', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.cktext_area :self_intro, class: 'form-control', rows: 4 %>
             <small class="text-muted">
               *Some functions are not available*
@@ -66,8 +66,8 @@
         </div>
         
         <div class="form-group row">
-          <%= f.label :password, 'Password', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :password, 'Password', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.password_field :password, class: 'form-control' %>
             <small class="text-muted">
             Must be 5-20 characters long.
@@ -76,8 +76,8 @@
         </div>
   
         <div class="form-group row">
-          <%= f.label :password_confirmation, 'Password (confirm)', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :password_confirmation, 'Password (confirm)', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
         </div>
@@ -91,43 +91,43 @@
         </div>
   
         <div class="form-group">  
-          <div class="col-sm-9">
+          <div class="col-sm-9 col-md-10">
             <%= f.submit (t :update), class: 'btn btn-success btn-block' %>
           </div>
         </div>
       
       <% else %>
         <div class="form-group row">
-          <%= f.label :name, 'Name', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :name, 'Name', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.text_field :name, class: 'form-control', :disabled => true  %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :nationality, 'Nationality', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :nationality, 'Nationality', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.country_select :nationality, { priority_countries: ["JP", "US", "CN", "TW", "KR", "RU"], priority_countries_divider: "----------" } , {class: 'form-control'}, :disabled => true  %>
           </div>
         </div>
     
         <div class="form-group row">
-          <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :japanese_ability, 'Japanese Ability', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.select :japanese_ability, [["母国語/Native", "0"], ["N1 Advanced", "1"], ["N2 Upper Intermediate", "2"], ["N3 Intermediate", "3"], ["N4 Beginner Intermediate", "4"], ["N5 Beginner", "5"], ["No Japanese ability", "6"]], { :disabled => true }, { class: 'form-control'} %>
           </div>
         </div>
   
         <div class="form-group row">
-          <%= f.label :residence, 'City', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :residence, 'City', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%= f.text_field :residence, class: 'form-control', :placeholder => "Tokyo", :disabled => true  %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :self_intro, 'About Me', class: "col-sm-4 col-form-label" %>
-          <div class="col-sm-5">
+          <%= f.label :self_intro, 'About Me', class: "col-sm-4 col-md-2 col-form-label" %>
+          <div class="col-sm-5 col-md-8">
           <%== @user.self_intro %>
           </div>
           
