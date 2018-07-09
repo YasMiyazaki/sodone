@@ -23,7 +23,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true #記述をfalseからtrueにするfor ckeditor on 20180709
+  config.assets.compile = false #記述をfalseからtrueにするfor ckeditor on 20180709 #Cancelled 
   
   # for ckeditor on 20180709
   config.assets.precompile += Ckeditor.assets
