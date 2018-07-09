@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
   
     get 'signup', to: 'users#new'
-    resources :users, only: [:show, :new, :create, :update]
+    resources :users, only: [:show, :new, :create, :edit, :update]
     resources :posts, only: [:show]
     
     resources :comments, only: [:list, :show, :create, :destroy]

@@ -17,9 +17,9 @@
 
 <h5><%=t :comments %></h5>
 <% @post.comments.each do |comment| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">
+  <div id="postofcomments">
+    <div class="card">
+      <div class="card-body">
         <%= link_to comment.user.name, user_path(comment.user)%>
         <%= simple_format(comment.comment) %>
         <%# Childcomment #%>
@@ -32,7 +32,7 @@
             <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
           <% end %>
         <% end %>
-      </h5>
+      </div>
     </div>
   </div>
 <% end %>

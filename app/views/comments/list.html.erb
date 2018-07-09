@@ -17,14 +17,12 @@
             </span>
         </div>
         <div class="card-body">
-          <h5 class="card-title">
-            <%= link_to comment.user.name, user_path(comment.user)%>
-            <%= simple_format(comment.comment) %>
-            <%# Childcomment #%>
-            <%= link_to "Comment", comment_url(comment), class: "btn btn-light btn-sm" %>
-            <%# Childcomment Count #%>
-            <span class="badge"><%= comment.childcomments.count %></span>
-          </h5>
+          <%= link_to comment.user.name, user_path(comment.user)%>
+          <%= simple_format(comment.comment) %>
+          <%# Childcomment #%>
+          <%= link_to "Comment", comment_url(comment), class: "btn btn-light btn-sm" %>
+          <%# Childcomment Count #%>
+          <span class="badge"><%= comment.childcomments.count %></span>
         </div>
       </div>
     </div>

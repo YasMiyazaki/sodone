@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   
-  before_action :require_user_logged_in, only: [:show, :update]
+  before_action :require_user_logged_in, only: [:show, :update, :edit]
   
   def show
     @user = User.find(params[:id])
+    @mycomments = @user.comments.order('created_at DESC').page(params[:page])
   end
 
   def new
@@ -22,6 +23,10 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+def edit
+    @user = User.find(params[:id])
+end
 
 def update
     @user = User.find(params[:id])
