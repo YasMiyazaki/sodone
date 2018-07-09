@@ -37,7 +37,7 @@
         <div class="form-group row">
           <%= f.label :occupation, 'Visa', class: "col-sm-4 col-md-2 col-form-label" %>
           <div class="col-sm-5 col-md-8">
-          <%= f.text_field :occupation, class: 'form-control', :disabled => true %>
+          <%= f.grouped_collection_select :occupation, Visacategory.all, :visas, :category, :id, :name, {:disabled => true} , {class: 'form-control'}%>
           </div>
         </div>
   
