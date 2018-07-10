@@ -12,6 +12,10 @@
                 <small class="text-muted"><i class="fa fa-trash" aria-hidden="true"></i></small>
               <% end %>
             <% end %>
+          <%# Childcomment #%>
+          <%= link_to "Comment", comment_url(comment), class: "btn btn-light btn-sm" %>
+          <%# Childcomment Count #%>
+          <span class="badge"><%= comment.childcomments.count %></span>
             <span class="text-muted">
               <%= time_ago_in_words(comment.created_at) %>
             </span>
@@ -19,10 +23,6 @@
         <div class="card-body">
           <%= link_to comment.user.name, user_path(comment.user)%>
           <%= simple_format(comment.comment) %>
-          <%# Childcomment #%>
-          <%= link_to "Comment", comment_url(comment), class: "btn btn-light btn-sm" %>
-          <%# Childcomment Count #%>
-          <span class="badge"><%= comment.childcomments.count %></span>
         </div>
       </div>
     </div>
